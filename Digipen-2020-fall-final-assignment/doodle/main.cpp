@@ -1,41 +1,45 @@
-// Name       : TODO
-// Assignment : TODO
-// Course     : TODO
-// Term & Year: TODO
-
 #include <doodle/doodle.hpp>
-
+#include"assets.h"
+#include"Button.h"
 using namespace doodle;
-
-double angle{0.0};
-double grey{0};
-double x{0.0};
-double y{0.0};
-
 int main(void)
+try
 {
-    create_window(480, 360);
+    create_window("Create Button Spawner",1000,1000);
+    set_frame_of_reference(FrameOfReference::LeftHanded_OriginTopLeft);
     set_rectangle_mode(RectMode::Center);
+    std::map<Monster_Color,Image> Images;
+    save_image(Images);
+
+    Button button1{500,900};
+
     while (!is_window_closed())
     {
         update_window();
-        clear_background(220);
-        set_fill_color(grey);
-        draw_rectangle(x, y, Width * 0.4, Height * 0.4);
+        clear_background(255);
+        button1.update();
+        button1.draw();
+        //auto it = Images.find(Monster_Color::yellow);
+        //draw_image(it->second, 40, 40);
     }
     return 0;
 }
 
-void on_mouse_moved(int mouse_x, int mouse_y)
+catch (const std::exception&)
 {
-    angle += to_radians(3.0);
-    grey = 255 * (std::sin(angle) * 0.5 + 0.5);
-    x    = mouse_x;
-    y    = mouse_y;
+
 }
 
-void on_key_released(KeyboardButtons button)
-{
-    if (button == KeyboardButtons::Escape)
-        close_window();
-}
+
+   
+
+
+
+
+
+
+
+
+
+
+
