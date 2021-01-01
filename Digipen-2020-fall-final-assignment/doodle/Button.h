@@ -12,6 +12,7 @@ private:
     double posy;
     double      width=100;
     double      height=40;
+
     bool        mouseIsOver = false;
     bool        mousewasPressed = false;
     std::string Click_Message{"Click!"};
