@@ -4,4 +4,5 @@
 #include<string>
 #include<map>
 void ReadFilname(std::istream& is, std::ifstream& ifs);
-void CountWord(std::istream& ifs, std::map<char, int>& count);
+std::istream& CountWord(std::istream& ifs, std::map<char, int>& count);
+std::istream& CountString(std::istream& ifs, std::map<std::string, int>& count);
