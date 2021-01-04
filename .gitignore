@@ -23,3 +23,16 @@ C++ Primer/FileIO/.vs/FileIO/v16/Browse.VC.db
 *.tlog
 C++ Primer/FileIO/FileIO/Debug/vc142.pdb
 *.log
+*.sln
+*.suo
+*.db
+*.pdb
+*.filters
+*.vcxproj
+*.db-shm
+*.db-wal
+*.opendb
+*.ipch
+*.cpp
+*.ilk
+*.exe
